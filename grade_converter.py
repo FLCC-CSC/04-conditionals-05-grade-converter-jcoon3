@@ -1,94 +1,33 @@
-# FILE NAME - grade_converter.py
+# Name: Justin Coon
+# Date: 09-29-2025
+# A program that converts numerical grades into letter grades
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# Prints grade converter banner
+print("===== Grade Converter =====")
 
+# Assigns the numerical_grade variable user input
+numerical_grade = float(input("Enter a numerical grade (1-100): "))
 
+# If clause to check if the grade is > 100 and prints A+ if it is
+if numerical_grade > 100:
+    print("A+")
 
-# 1. Make sure you fill out the comments above
-# 2. Write your code in the proper spot
-# 3. Be sure to answer the Reflection Questions and Attestation below
-# 4. The Sample Output has been included in this code for your convenience
+# elif clause to check the range 90<=x<=100 and prints A if it is
+elif numerical_grade in range(90, 101):
+    print("A")
 
+# elif clause to check if the grade is from 80<=x<90 and prints B if it is    
+elif numerical_grade in range(80, 90):
+    print("B")
 
+# elif clause to check if the grade is from 70<=x<80 and prints C if it is       
+elif numerical_grade in range(70, 80):
+    print("C")
 
-########## ENTER YER CODE BELOW THIS LINE ##########
+# elif clause to check if the grade is from 65<=x<700 and prints D if it is        
+elif numerical_grade in range(65, 70):
+    print("D")
 
-print('===== Grade Converter =====')
-
-percent = int(input('Enter a numerical grade (1-100): '))
-
-if percent > 100:
-    print('A+')
-elif percent >= 90:
-    print('A')
-elif percent >= 80:
-    print('B')
-elif percent >= 70:
-    print('C')
-elif percent >= 65:
-    print('D')
+# else clause that prints F if the input is under 65
 else:
-    print('F')
-
-########### END YER CODE ABOVE THIS LINE ###########
-
-    
-
-
-
-########################################
-#          SAMPLE OUTPUT
-########################################
-
-'''
-===== Grade Converter =====
-Enter a numerical grade (1-100): 101
-A+
-'''
-
-
-'''
-===== Grade Converter =====
-Enter a numerical grade (1-100): -78
-F
-'''
-
-
-'''
-===== Grade Converter =====
-Enter a numerical grade (1-100): 64
-F
-'''
-
-
-'''
-===== Grade Converter =====
-Enter a numerical grade (1-100): 65
-D
-'''
-
-
-'''
-===== Grade Converter =====
-Enter a numerical grade (1-100): 66
-D
-'''
-
-########################################
-#          REFLECTION QUESTIONS
-########################################
-
-'''
-
-1. What is something you would tell a future student to be careful about when
-   doing this lab?
-
-
-
-
-
-
-
-'''
+    print("F")
